@@ -1,0 +1,394 @@
+
+@media screen and (max-width: 1200px) {
+    .hero {
+        &__title {
+            font-size: 40px;
+            line-height: 46px;
+        }
+        &__paragraph {
+            font-size: 18px;
+            line-height: 26px;
+        }
+        &__btn {
+            font-size: 16px;
+            line-height: 46px;
+            padding: 13px 32px;
+        }
+    }
+    .services {
+        .article {
+            &__title {
+                font-size: 22px;
+                line-height: 46px;
+            }
+            &__paragraph {
+                font-size: 16px;
+            }
+        }
+    }
+    .about, .download {
+        margin: 160px auto 0;
+
+        &__text {
+            max-width: 420px;
+        }
+    }
+    .testimonials {
+        .user {
+            &__img {
+                width: 120px;
+            }
+            &__info {
+                .user__name {
+                    line-height: 26px;
+                }
+            }
+        }
+        .testimonial__text {
+            max-width: 380px;
+            font-size: 17px;
+            line-height: 24px;
+            margin-left: 30px;
+        }
+    }
+    .footer {
+        &__info {
+            max-width: 340px;
+        }
+        &__paragraph, &__copyright {
+            font-size: 16px;
+            line-height: 22px;
+        }
+        &__list {
+            margin: 0 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.1);
+    }
+    .nav {
+        padding: 30px 0;
+        &__links {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            visibility: hidden;
+            transform: translateX(100%);
+            transition: all 0.2s ease-in;
+
+            &--active {
+                visibility: visible;
+                transform: translateX(0);
+            }
+
+            li {
+                margin: 30px 0;
+            }
+        }
+        &__link {
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            &--active {
+                color: rgba(31, 21, 52, 0.5);
+            }
+        }
+        &__btn {
+            display: flex;
+            width: 36px;
+            z-index: 1;
+
+            img {
+                width: 100%;
+                pointer-events: none;
+            }
+        }
+    }
+    .hero {
+        flex-direction: column;
+        margin: 250px auto 100px;
+
+        &__text {
+            text-align: center;
+            width: 80vw;
+            max-width: none;
+        }
+        &__title {
+            margin-bottom: 50px;
+        }
+        &__img {
+            width: 50vw;
+            max-width: 480px;
+            margin-bottom: 60px;
+        }
+    }
+    .services {
+        margin-top: 150px;
+
+        &__articles {
+            flex-direction: column;
+            align-items: center;
+
+            .article {
+                text-align: center;
+            }
+        }
+    }
+    .about, .download {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 150px;
+
+        &__img {
+            margin-bottom: 60px;
+            width: 50vw;
+        }
+        &__title {
+            text-align: center;
+            &::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &__paragraph {
+            text-align: justify;
+        }
+        &__btn {
+            margin: 0 auto;
+        }
+    }
+    .testimonials {
+        margin: 100px auto;
+        
+        .testimonial {
+            &__title {
+                font-size: 30px;
+                line-height: 32px;
+            }
+            &__article {
+                flex-direction: column;
+
+                .user {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    .blog {
+        &__articles {
+            flex-direction: column;
+            align-items: center;
+
+            .article {
+                width: 100%;
+                margin: 20px auto;
+            }
+        }
+    }
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        &__links {
+            margin-top: 50px;
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .nav {
+        padding: 30px 0;
+    }
+    .hero {
+        margin-top: 150px;
+    }
+    .testimonials {
+        .testimonial {
+            &__title {
+                font-size: 22px;
+                line-height: 24px;
+                margin: 50px auto 20px;
+            }
+            &__article {
+                .user {
+                    flex-direction: column;
+                    text-align: center;
+
+                    &__img {
+                        margin: 0 0 20px;
+                    }
+                }
+            }
+            &__text {
+                text-align: justify;
+                margin: 0;
+            }
+            &__slider {
+                margin: 60px auto;
+            }
+        }
+    }
+    .blog {
+        &__articles {
+            margin-top: 60px;
+        }
+    }
+    .footer {
+        &__links {
+            flex-direction: column;
+        }
+        &__list {
+            margin: 30px 0;
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .nav {
+        &__logo {
+            font-size: 20px;
+
+            span {
+                font-size: 22px;
+            }
+        }
+        &__btn {
+            width: 28px;
+        }
+    }
+    .hero {
+        &__title {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        &__paragraph {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+    .services {
+        margin-top: 40px;
+
+        &__title {
+            font-size: 20px;
+        }
+        &__paragraph {
+            font-size: 14px;
+            width: 80%;
+        }
+        &__articles {
+            .article {
+                width: fit-content;
+                &__img {
+                    width: 70px;
+                    min-height: 0;
+                }
+                &__title {
+                    font-size: 16px;
+                    line-height: 26px;
+                    margin-bottom: 10px;
+                }
+                &__paragraph {
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+            }
+        }
+    }
+    .about, .download {
+        margin-top: 100px;
+        &__img {
+            width: 80%;
+        }
+        &__title {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        &__paragraph {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+    .testimonials {
+        .testimonial {
+            &__title {
+                font-size: 18px;
+                text-align: center;
+            }
+            .user {
+                &__img {
+                    width: 100px;
+                }
+                &__name {
+                    font-size: 16px;
+                }
+                &__company {
+                    font-size: 14px;
+                }
+            }
+            &__text {
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+        &__arrows {
+            width: 90%;
+        }
+        &__dot {
+            margin: 0 ;
+        }
+    }
+    .blog {
+        &__title {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        &__articles {
+            .article {
+                &__title {
+                    font-size: 16px;
+                    line-height: 26px;
+                    margin-bottom: 10px;
+                }
+                &__paragraph {
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+                &__btn {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .footer {
+        &__links {
+            margin-top: 20px;
+        }
+        &__list {
+            margin: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    body {
+        display: none;
+    }
+}

@@ -1,4 +1,48 @@
 
+// Nav
+const navBtn = document.querySelector(".nav__btn")
+const navLinks = document.querySelector(".nav__links")
+const navLinksArray = document.querySelectorAll(".nav__links a")
+const testimonialsArrows = document.querySelector(".testimonials__arrows")
+const testimonialTitle = document.querySelector(".testimonial__title")
+
+const handleOpenNav = () => {
+  navLinks.classList.toggle("nav__links--active")
+  if (navLinks.classList.contains("nav__links--active")) {
+    testimonialsArrows.style.visibility = "hidden" 
+    testimonialTitle.style.visibility = "hidden"
+  } else {
+    testimonialsArrows.style.visibility = "visible"
+    testimonialTitle.style.visibility = "visible"
+  }
+}
+
+navBtn.onclick = handleOpenNav
+navLinksArray.forEach((link) => {
+  link.onclick = handleOpenNav
+})
+
+// Responsive layout
+const heroContainer = document.querySelector(".hero")
+const heroText = document.querySelector(".hero__text")
+const heroImg = document.querySelector(".hero__img")
+const downloadContainer = document.querySelector(".download")
+const downloadText = document.querySelector(".download__text")
+const downloadImg = document.querySelector(".download__img")
+
+const handleResponsive = () => {
+    if (window.innerWidth < 1024) {
+        heroContainer.insertBefore(heroImg, heroText)
+        downloadContainer ? downloadContainer.insertBefore(downloadImg, downloadText) : null
+    } else {
+        heroContainer.insertBefore(heroText, heroImg)
+        downloadContainer ? downloadContainer.insertBefore(downloadText, downloadImg) : null
+    }
+}
+
+window.onresize = handleResponsive
+window.onload = handleResponsive
+
 // Testimonials Slider
 const nextBtn = document.querySelector(".next__btn")
 const prevBtn = document.querySelector(".prev__btn")

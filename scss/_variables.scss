@@ -9,6 +9,10 @@ $light-gray: #7D7987;
     height: 2px;
     background-color: #000;
     position: absolute;
+
+    @media screen and (max-width: 768px) {
+        width: 42px;
+    }
 }
 
 @mixin primaryBtn {
@@ -29,10 +33,25 @@ $light-gray: #7D7987;
         color: #fff;
         background-color: #458FF6;
     }
+    @media screen and (max-width: 1200px) {
+        width: 160px;
+        height: 48px;
+    }
+    @media screen and (max-width: 480px) {
+        width: 120px;
+        height: 36px;
+        font-size: 14px;
+    }
 }
 
 @mixin sectionTitle {
     font-size: 36px;
     line-height: 56px;
     position: relative;
+    z-index: -1;
+
+    @media screen and (max-width: 1200px) {
+        font-size: 28px;
+        line-height: 40px;
+    }
 }
